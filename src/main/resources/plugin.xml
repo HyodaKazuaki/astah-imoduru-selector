@@ -11,12 +11,20 @@
                path="tool/imoduru-selector">
          </menu>
          <action
-			   label="%menu_label"
-               icon="icons/sample.gif"
-               class="com.example.astah.TemplateAction"
-               tooltip="%menu_tooltip"
-               menubarPath="tool/imoduru-selector/"
-               id="imoduru-selector">
+                 label="%select_inheritance_menu_label"
+                 icon="icons/sample.gif"
+                 class="com.example.astah.SelectInheritanceAction"
+                 tooltip="%menu_tooltip"
+                 menubarPath="tool/imoduru-selector/"
+                 id="imoduru-selector.select-inheritance">
+         </action>
+         <action
+                 label="%select_menu_label"
+                 icon="icons/sample.gif"
+                 class="com.example.astah.TemplateAction"
+                 tooltip="%menu_tooltip"
+                 menubarPath="tool/imoduru-selector/"
+                 id="imoduru-selector.select">
          </action>
      </actionSet>
    </extension>
