@@ -17,8 +17,10 @@ class TemplateAction : IPluginActionDelegate {
             val diagramViewManager = AstahAPI.getAstahAPI().viewManager.diagramViewManager
             val targetNodes = diagramViewManager.selectedPresentations
                     .filterIsInstance<INodePresentation>()
-                    .flatMap {
-                        node -> node.links.filter { it.source == node }.map { it.target }
+                    .flatMap { node ->
+                        node.links
+                                .filter { it.source == node }
+                                .map { it.target }
                     }.toTypedArray()
             diagramViewManager.select(targetNodes)
         } catch (e: ProjectNotFoundException) {
